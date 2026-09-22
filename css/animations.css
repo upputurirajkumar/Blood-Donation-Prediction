@@ -1,0 +1,105 @@
+/* ==========================================================================
+   BLOODINTEL — Motion & Animation Keyframes
+   ========================================================================== */
+
+@keyframes pulse-ruby {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(225, 29, 72, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 22px rgba(225, 29, 72, 0.85);
+  }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.7);
+  }
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.radar-sweep-effect {
+  animation: radar-sweep 8s linear infinite;
+  transform-origin: center center;
+}
+
+.float-hover {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.pulse-highlight {
+  animation: pulse-ruby 1.2s ease;
+}
+
+/* Pipeline Stage Glow Sequence */
+.pipeline-stage-node {
+  transition: all 0.4s ease;
+  opacity: 0.6;
+}
+
+.pipeline-stage-node.pipeline-active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.pipeline-stage-node.pipeline-active circle {
+  stroke: #e11d48;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px #e11d48);
+}
+
+/* Seven Models Interaction Glow */
+.model-node-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.model-node-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.model-node-card.active-model {
+  border-color: var(--accent-ruby);
+  background: rgba(225, 29, 72, 0.12);
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.35);
+  transform: scale(1.02);
+}
+
+/* Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}

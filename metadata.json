@@ -1,0 +1,7 @@
+{
+  "name": "BloodIntel",
+  "description": "Blood Donation Prediction Intelligence — End-to-end Machine Learning web application predicting repeat donor behavior.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
